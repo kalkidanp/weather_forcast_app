@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b80fb1d058049166a2b24dd2974b720c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+                    <div style="position: fixed; 
+                                bottom: 100px; left: 50px; width: 120px; height: 90px; 
+                                border:2px solid grey; z-index:9999; font-size:12px;
+                                "
+                                >
+                                <b>
+                                <font color="red">
+                                &nbsp;                             
+                                Legend
+                                </font>
+                                </b>
+                                <br>
+                                     <img 
+                                         src="http://openweathermap.org/img/wn/01d@2x.png" alt="weather" height="40" width="40"
+                                     />
+                                      <b> <font color="green">
+                                      &nbsp; clear sky &nbsp;
+                                      </font>
+                                      </b?
+                                      <i 
+                                          class="icon" style="color:red">
+                                      </i>
+                                <br>
+                                  
+                    </div>
+                    
+    
+            <div class="folium-map" id="map_b80fb1d058049166a2b24dd2974b720c" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b80fb1d058049166a2b24dd2974b720c = L.map(
+                "map_b80fb1d058049166a2b24dd2974b720c",
+                {
+                    center: [11.5949663, 37.3882251],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 8,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2c12cd2c27f12bdb66054f7c9aea295e = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_b80fb1d058049166a2b24dd2974b720c);
+        
+    
+            var marker_13ba2a0286a244fe2c707f19179657e4 = L.marker(
+                [11.5649663, 37.2682251],
+                {"html": "\u003cdiv style=\"font-size:12pt\"\u003e78.55 F\u003c/div\u003e"}
+            ).addTo(map_b80fb1d058049166a2b24dd2974b720c);
+        
+    
+        var custom_icon_4656ff48175c8be0e15f0b551e38cbe2 = L.icon({"iconAnchor": [22, 94], "iconSize": [100, 100], "iconUrl": "http://openweathermap.org/img/wn/01d@2x.png", "popupAnchor": [-3, -76]});
+        marker_13ba2a0286a244fe2c707f19179657e4.setIcon(custom_icon_4656ff48175c8be0e15f0b551e38cbe2);
+        
+    
+        var popup_8cd2392d2c33fdeaab4515753930f579 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_be8d3ce73ac901097b7d7e0ff6a5923e = $(`<div id="html_be8d3ce73ac901097b7d7e0ff6a5923e" style="width: 100.0%; height: 100.0%;">Temperature is 78.55F</div>`)[0];
+                popup_8cd2392d2c33fdeaab4515753930f579.setContent(html_be8d3ce73ac901097b7d7e0ff6a5923e);
+            
+        
+
+        marker_13ba2a0286a244fe2c707f19179657e4.bindPopup(popup_8cd2392d2c33fdeaab4515753930f579)
+        ;
+
+        
+    
+    
+        var popup_71113b3c01ff9891a29b9529e9d83bf8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_471e4b2fb199ba4844a3427c5d9dac5b = $(`<div id="html_471e4b2fb199ba4844a3427c5d9dac5b" style="width: 100.0%; height: 100.0%;">78.55</div>`)[0];
+                popup_71113b3c01ff9891a29b9529e9d83bf8.setContent(html_471e4b2fb199ba4844a3427c5d9dac5b);
+            
+        
+
+        map_b80fb1d058049166a2b24dd2974b720c.bindPopup(popup_71113b3c01ff9891a29b9529e9d83bf8)
+        ;
+
+        
+    
+</script>
+</html>

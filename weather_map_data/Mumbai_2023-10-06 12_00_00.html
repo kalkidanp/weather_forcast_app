@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d6d78571c310c1d2d38311f053814114 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+                    <div style="position: fixed; 
+                                bottom: 100px; left: 50px; width: 120px; height: 90px; 
+                                border:2px solid grey; z-index:9999; font-size:12px;
+                                "
+                                >
+                                <b>
+                                <font color="red">
+                                &nbsp;                             
+                                Legend
+                                </font>
+                                </b>
+                                <br>
+                                     <img 
+                                         src="http://openweathermap.org/img/wn/04d@2x.png" alt="weather" height="40" width="40"
+                                     />
+                                      <b> <font color="green">
+                                      &nbsp; overcast clouds &nbsp;
+                                      </font>
+                                      </b?
+                                      <i 
+                                          class="icon" style="color:red">
+                                      </i>
+                                <br>
+                                  
+                    </div>
+                    
+    
+            <div class="folium-map" id="map_d6d78571c310c1d2d38311f053814114" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d6d78571c310c1d2d38311f053814114 = L.map(
+                "map_d6d78571c310c1d2d38311f053814114",
+                {
+                    center: [19.08157715, 72.88662753964906],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 8,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_9d3b6e71516f59fb6440458ea31355ff = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_d6d78571c310c1d2d38311f053814114);
+        
+    
+            var marker_f0d2c2e71f40970e9a15987a058110b3 = L.marker(
+                [19.05157715, 72.76662753964905],
+                {"html": "\u003cdiv style=\"font-size:12pt\"\u003e81.63 F\u003c/div\u003e"}
+            ).addTo(map_d6d78571c310c1d2d38311f053814114);
+        
+    
+        var custom_icon_e9eb5840520915f2a15dbc4dca737ff3 = L.icon({"iconAnchor": [22, 94], "iconSize": [100, 100], "iconUrl": "http://openweathermap.org/img/wn/04d@2x.png", "popupAnchor": [-3, -76]});
+        marker_f0d2c2e71f40970e9a15987a058110b3.setIcon(custom_icon_e9eb5840520915f2a15dbc4dca737ff3);
+        
+    
+        var popup_c85c868cc6da20f6c8b17e685d7fd26d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8c1029482d361a02ce29cf873c0e6812 = $(`<div id="html_8c1029482d361a02ce29cf873c0e6812" style="width: 100.0%; height: 100.0%;">Temperature is 81.63F</div>`)[0];
+                popup_c85c868cc6da20f6c8b17e685d7fd26d.setContent(html_8c1029482d361a02ce29cf873c0e6812);
+            
+        
+
+        marker_f0d2c2e71f40970e9a15987a058110b3.bindPopup(popup_c85c868cc6da20f6c8b17e685d7fd26d)
+        ;
+
+        
+    
+    
+        var popup_2834ba7cde9f068bfd0748e57690e60c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_882a9c0a3f409c23bf5e1a9946524732 = $(`<div id="html_882a9c0a3f409c23bf5e1a9946524732" style="width: 100.0%; height: 100.0%;">81.63</div>`)[0];
+                popup_2834ba7cde9f068bfd0748e57690e60c.setContent(html_882a9c0a3f409c23bf5e1a9946524732);
+            
+        
+
+        map_d6d78571c310c1d2d38311f053814114.bindPopup(popup_2834ba7cde9f068bfd0748e57690e60c)
+        ;
+
+        
+    
+</script>
+</html>
